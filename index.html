@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link type="text/css" rel="stylesheet" href="normalize.css" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+<title>Personal Portfolio</title>
+
+<!-- <link rel="stylesheet" href="style.css"> -->
+<!-- Test script doesn't work with external css for some reason -->
+
+<style>
+
+/*csslint box-sizing: false*/
+
+/* Mobile first*/
+
+html,
+body { 
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  overflow: auto;
+  word-break: keep-all;
+}
+
+/* Nav menu */
+
+.nav {
+  /*background-color: #f7f7f7;*/
+  background-color: #fff;
+  box-shadow: 3px 3px 3px #0000001a;
+  box-sizing: border-box;
+  font-size: 1.125rem;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+.nav-header {
+  height: 1.7rem;
+  padding-left: 0.5rem;
+}
+
+.nav-title {
+  display: inline-block;
+  font-size: 1.3rem;
+  height: 1.7rem;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: calc(100% - 3rem);
+}
+
+.navbar-toggle {
+  color: #000;
+  cursor: pointer;
+  font-size: 1.5rem;
+  height: 1.7rem;
+  position: absolute;
+  right: 0.5rem;
+  top: 0;
+}
+
+.main-nav {
+  display: none;
+  list-style-type: none;
+  padding: 0;
+}
+
+.main-nav li {
+  margin: 1rem auto;
+  text-align: center;
+}
+
+.nav-link,
+.nav-title {
+  color: #000;
+  text-decoration: none;
+}
+
+.active {
+  display: block;
+}
+
+/* Body */
+
+/* Welcome section */
+
+.welcome {
+  background-color: #f5f5f5;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  text-align: center;
+}
+
+/* Projects */
+
+.project-tiles {
+  background-color: #f5f5f5;
+  display: grid;
+  grid-gap: 2rem;
+  grid-template-columns: auto;
+  justify-content: center;
+  overflow: auto;
+  padding: 1rem;
+  text-align: center;
+}
+
+.profile-links {
+  align-items: center;
+  background-color: #242424;
+  display: grid;
+  grid-column-gap: 5rem;
+  grid-template-columns: auto auto auto;
+  height: 15rem;
+  justify-content: center;
+}
+
+.profile-links a {
+  color: #fff;
+  text-decoration: none;
+}
+
+img {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+.container {
+  position: relative;
+}
+
+.image {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.container:hover .image {
+  opacity: 0.3;
+}
+
+.container:hover .middle {
+  opacity: 1;
+}
+
+.text {
+  background-color: #242424;
+  color: white;
+  font-size: 16px;
+  padding: 16px 32px;
+}
+
+
+.tile-name {
+  color: #242424;
+  text-decoration: none;
+}
+
+a:hover,
+i:hover {
+  color: #3686be;
+  text-decoration: none
+}
+
+
+@media screen and (min-width: 48rem) { 
+  .nav-header {
+    display: none;
+  }
+
+  .navbar-toggle {
+    display: none;
+  }
+
+  .main-nav {
+    display: block;
+    height: 1.7rem;
+    line-height: 1.7rem;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+
+  .main-nav li {
+    display: inline-block;
+    margin: 0 0.5rem;
+    top: 0;
+  }
+
+  .project-tiles {
+    grid-template-columns: auto auto;
+  }
+
+
+}
+
+</style>
+
+<nav class="nav" id="navbar">
+  <header class="nav-header">
+    <a href="#welcome-section" class="nav-title" id="title-scrolltop">Personal Portfolio</a>
+    <span class="navbar-toggle" id="js-navbar-toggle">
+      <i class="fas fa-bars"></i>
+    </span>
+  </header>
+  <ul class="main-nav" id="js-menu">
+    <li><a href="#welcome-section" class="nav-link">Home</a></li>
+    <li><a href="#projects" class="nav-link">Projects</a></li>
+    <li><a href="#links" class="nav-link">Links</a></li>
+  </ul>
+</nav>
+
+<section id="welcome-section" class="welcome">
+  <h1>Gergo Dudaszeg</h1>
+  <p>Self-taught web developer</p>
+</section>
+
+<section id="projects" class="project-tiles">
+  <div>
+    <div class="project-tile container">
+      <img src="tribute.PNG" alt="Tribute Page" class="image">
+      <a href="https://g-du-1.github.io/tribute-page/" class="middle" target="_blank">
+        <div class="text">Open</div>
+      </a>
+    </div>
+    <h5><a href="https://g-du-1.github.io/tribute-page/" class="tile-name" target="_blank">Tribute Page</a></h5>
+  </div>
+
+  <div>
+    <div class="project-tile container">
+      <img src="survey.PNG" alt="Survey Form" class="image">
+      <a href="https://g-du-1.github.io/survey-form/" class="middle" target="_blank">
+        <div class="text">Open</div>
+      </a>
+    </div>
+    <h5><a href="https://g-du-1.github.io/survey-form/" class="tile-name" target="_blank">Survey Form</a></h5>
+  </div>
+
+  <div>
+    <div class="project-tile container">
+      <img src="productlanding.PNG" alt="Product Landing Page" class="image">
+      <a href="https://g-du-1.github.io/product-landing-page/" class="middle" target="_blank">
+        <div class="text">Open</div>
+      </a>
+    </div>
+    <h5><a href="https://g-du-1.github.io/product-landing-page/" class="tile-name" target="_blank">Product Landing Page</a></h5>
+  </div>
+
+  <div>
+    <div class="project-tile container">
+      <img src="techdoc.PNG" alt="Technical Documentation Page" class="image">
+      <a href="https://g-du-1.github.io/technical-documentation-page/" class="middle" target="_blank">
+        <div class="text">Open</div>
+      </a>
+    </div>
+    <h5><a href="https://g-du-1.github.io/technical-documentation-page/" class="tile-name" target="_blank">Technical Documentation</a></h5>
+  </div>
+
+</section>
+
+<section id="links" class="profile-links">
+  <a href="" id="profile-link" target="_blank">
+    <i class="fas fa-phone-square fa-3x"></i></a>
+  <a href="https://github.com/g-du-1" id="profile-link" target="_blank">
+    <i class="fab fa-github fa-3x"></i></a>
+  <a href="mailto:dudaszeg1@gmail.com" id="profile-link" target="_blank">
+    <i class="fas fa-envelope fa-3x"></i></a>
+</section>
+
+
+
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+
+<script>
+
+$('#js-navbar-toggle').on('click', function () {
+  $('#js-menu').toggleClass('active');
+});
+
+$( '#js-menu a' ).on("click", function(){
+  $('#js-menu').removeClass('active');
+});
+
+$(document).click(function (e) {
+    e.stopPropagation();
+    var container = $(".nav");
+
+    if (container.has(e.target).length === 0) {
+        $('#js-menu').removeClass('active');
+    }
+})
+
+$( '#title-scrolltop' ).on("click", function(){
+  $('#js-menu').removeClass('active');
+});
+
+$('a[href="#welcome-section"]').on('click', function(e) {
+    e.preventDefault();
+    $('body, html').scrollTop(0);
+});
+
+</script>
+
+</html>
