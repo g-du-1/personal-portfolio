@@ -110,7 +110,7 @@ body {
   text-align: center;
 }
 
-.profile-links {
+.links {
   align-items: center;
   background-color: #242424;
   display: grid;
@@ -120,7 +120,7 @@ body {
   justify-content: center;
 }
 
-.profile-links a {
+.links a {
   color: #fff;
   text-decoration: none;
 }
@@ -142,11 +142,11 @@ img {
 
 
 
-.container {
+.tile__img-cont {
   position: relative;
 }
 
-.image {
+.tile__img {
   opacity: 1;
   display: block;
   width: 100%;
@@ -155,7 +155,7 @@ img {
   backface-visibility: hidden;
 }
 
-.middle {
+.tile__hvr-cont {
   transition: .5s ease;
   opacity: 0;
   position: absolute;
@@ -166,15 +166,15 @@ img {
   text-align: center;
 }
 
-.container:hover .image {
+.tile__img-cont:hover .tile__img {
   opacity: 0.3;
 }
 
-.container:hover .middle {
+.tile__img-cont:hover .tile__hvr-cont {
   opacity: 1;
 }
 
-.text {
+.tile__hvr-middle {
   background-color: #242424;
   color: white;
   font-size: 16px;
@@ -182,7 +182,7 @@ img {
 }
 
 
-.tile-name {
+.tile__name {
   color: #242424;
   text-decoration: none;
 }
@@ -236,8 +236,8 @@ i:hover {
   </header>
   <ul class="nav__menu" id="js-menu">
     <li><a class="nav__link" href="#welcome-section">Home</a></li>
-    <li><a class="nav__link" href="#projects">Projects</a></li>
-    <li><a class="nav__link" href="#links">Links</a></li>
+    <li><a class="nav__link" href="#projects-section">Projects</a></li>
+    <li><a class="nav__link" href="#links-section">Links</a></li>
   </ul>
 </nav>
 
@@ -246,61 +246,60 @@ i:hover {
   <p>Self-taught web developer</p>
 </section>
 
-<section class="projects" id="projects">
-  <div>
-    <div class=" container project-tile">
-      <img class="image" src="tribute.PNG" alt="Tribute Page">
-      <a class="middle" href="https://g-du-1.github.io/tribute-page/" target="_blank">
-        <div class="text">Open</div>
+<section class="projects" id="projects-section">
+
+  <div class="tile">
+    <div class="tile__img-cont project-tile"> <!-- project-tile class required by test script -->
+      <img class="tile__img" src="tribute.PNG" alt="Tribute Page">
+      <a class="tile__hvr-cont" href="https://g-du-1.github.io/tribute-page/" target="_blank">
+        <div class="tile__hvr-middle">Open</div>
       </a>
     </div>
-    <h5><a class="tile-name" href="https://g-du-1.github.io/tribute-page/" target="_blank">Tribute Page</a></h5>
+    <h5><a class="tile__name" href="https://g-du-1.github.io/tribute-page/" target="_blank">Tribute Page</a></h5>
   </div>
 
-  <div>
-    <div class="project-tile container">
-      <img class="image" src="survey.PNG" alt="Survey Form">
-      <a class="middle" href="https://g-du-1.github.io/survey-form/" target="_blank">
-        <div class="text">Open</div>
+  <div class="tile">
+    <div class="tile__img-cont">
+      <img class="tile__img" src="survey.PNG" alt="Survey Form">
+      <a class="tile__hvr-cont" href="https://g-du-1.github.io/survey-form/" target="_blank">
+        <div class="tile__hvr-middle">Open</div>
       </a>
     </div>
-    <h5><a class="tile-name" href="https://g-du-1.github.io/survey-form/" target="_blank">Survey Form</a></h5>
+    <h5><a class="tile__name" href="https://g-du-1.github.io/survey-form/" target="_blank">Survey Form</a></h5>
   </div>
 
-  <div>
-    <div class="project-tile container">
-      <img class="image" src="productlanding.PNG" alt="Product Landing Page">
-      <a class="middle" href="https://g-du-1.github.io/product-landing-page/" target="_blank">
-        <div class="text">Open</div>
+  <div class="tile">
+    <div class="tile__img-cont">
+      <img class="tile__img" src="productlanding.PNG" alt="Product Landing Page">
+      <a class="tile__hvr-cont" href="https://g-du-1.github.io/product-landing-page/" target="_blank">
+        <div class="tile__hvr-middle">Open</div>
       </a>
     </div>
-    <h5><a class="tile-name" href="https://g-du-1.github.io/product-landing-page/" target="_blank">Product Landing Page</a></h5>
+    <h5><a class="tile__name" href="https://g-du-1.github.io/product-landing-page/" target="_blank">Product Landing Page</a></h5>
   </div>
 
-  <div>
-    <div class="project-tile container">
-      <img class="image" src="techdoc.PNG" alt="Technical Documentation Page">
-      <a class="middle" href="https://g-du-1.github.io/technical-documentation-page/" target="_blank">
-        <div class="text">Open</div>
+  <div class="tile">
+    <div class="tile__img-cont">
+      <img class="tile__img" src="techdoc.PNG" alt="Technical Documentation Page">
+      <a class="tile__hvr-cont" href="https://g-du-1.github.io/technical-documentation-page/" target="_blank">
+        <div class="tile__hvr-middle">Open</div>
       </a>
     </div>
-    <h5><a class="tile-name" href="https://g-du-1.github.io/technical-documentation-page/" target="_blank">Technical Documentation</a></h5>
+    <h5><a class="tile__name" href="https://g-du-1.github.io/technical-documentation-page/" target="_blank">Technical Documentation</a></h5>
   </div>
 
 </section>
 
-<section class="profile-links" id="links">
-  <a id="profile-link" href="" target="_blank">
+<section class="links" id="links-section">
+  <a href="" target="_blank">
     <i class="fas fa-phone-square fa-3x"></i></a>
   <a id="profile-link" href="https://github.com/g-du-1" target="_blank">
     <i class="fab fa-github fa-3x"></i></a>
-  <a id="profile-link" href="mailto:dudaszeg1@gmail.com" target="_blank">
+  <a href="mailto:dudaszeg1@gmail.com" target="_blank">
     <i class="fas fa-envelope fa-3x"></i></a>
 </section>
 
-
-
-<!--<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>-->
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 
 <script>
 
