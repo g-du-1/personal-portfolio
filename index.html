@@ -89,7 +89,9 @@ body {
 /* Welcome section */
 
 .welcome {
-  background-color: #f5f5f5;
+  background: #f5f5f5 url("bg-sm.jpg") center center no-repeat fixed; 
+  background-size: cover; /* Shorthand didn't work with this. Need to look into it.*/
+  color: #fff;
   display: flex;
   flex-direction: column;
   height: 100vh;
@@ -223,6 +225,10 @@ i:hover {
     display: inline-block;
     margin: 0 0.5rem;
     top: 0;
+  }
+
+  .welcome {
+    background-image: url("bg.jpg"); /* TODO Add more steps with more resolutions*/
   }
 
   .projects {
