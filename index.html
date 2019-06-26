@@ -89,7 +89,7 @@ body {
 /* Welcome section */
 
 .welcome {
-  background: #f5f5f5 url("bg-sm.jpg") center center no-repeat fixed; 
+  background: #f5f5f5 url("bg290.jpg") center center no-repeat fixed; 
   background-size: cover; /* Shorthand didn't work with this. Need to look into it.*/
   color: #fff;
   display: flex;
@@ -227,16 +227,34 @@ i:hover {
     top: 0;
   }
 
-  .welcome {
-    background-image: url("bg.jpg"); /* TODO Add more steps with more resolutions*/
-  }
-
   .projects {
     grid-template-columns: auto auto;
   }
-
-
 }
+
+/* Breakpoints for background image resolution */
+
+@media only screen and (min-resolution: 2dppx) and (max-width: 320px) {
+    /* Small screen, retina */
+    .welcome { background-image: url("bg290@2x.jpg"); }
+}
+
+@media only screen and (min-width: 321px) and (max-width: 538px) {
+    /* Medium screen, non-retina */
+    .welcome { background-image: url("bg538.jpg"); }
+}
+
+@media only screen and (min-resolution: 2dppx) and (min-width: 321px) and (max-width: 538px) {
+    /* Medium screen, retina */
+    .welcome { background-image: url("bg538@2x.jpg"); }
+}
+
+@media only screen and (min-resolution: 2dppx) and (min-width: 539px) {
+    /* Large screen, retina */
+    .welcome { background-image: url("bg970@2x.jpg"); }
+}
+
+
 
 </style>
 
