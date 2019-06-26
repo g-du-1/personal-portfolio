@@ -89,7 +89,7 @@ body {
 /* Welcome section */
 
 .welcome {
-  background: #f5f5f5 url("bg290.jpg") center center no-repeat fixed; 
+  background: #f5f5f5 url("bg970.jpg") center center no-repeat fixed; 
   background-size: cover; /* Shorthand didn't work with this. Need to look into it.*/
   color: #fff;
   display: flex;
@@ -234,6 +234,11 @@ i:hover {
 
 /* Breakpoints for background image resolution */
 
+@media only screen and (max-width: 320px) {
+    /* Small screen, non-retina */
+    .welcome { background-image: url("bg290.jpg"); }
+}
+
 @media only screen and (min-resolution: 2dppx) and (max-width: 320px) {
     /* Small screen, retina */
     .welcome { background-image: url("bg290@2x.jpg"); }
@@ -253,8 +258,6 @@ i:hover {
     /* Large screen, retina */
     .welcome { background-image: url("bg970@2x.jpg"); }
 }
-
-
 
 </style>
 
