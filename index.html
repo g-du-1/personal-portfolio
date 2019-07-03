@@ -105,13 +105,27 @@ body {
   padding: 1rem;
 }
 
-.welcome__txt:hover {
-  opacity: 1;
-  transition: .5s ease;
-}
-
 .welcome__txt h1 {
   margin-top: 1rem;
+}
+
+.arrow-cont {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.arrow {
+  box-sizing: border-box;
+  box-shadow: 1px 1px 1px 0px #000000;
+  height: 2rem;
+  width: 2rem;
+  border-style: solid;
+  border-color: white;
+  margin-bottom: 1rem;
+  border-width: 0px 1px 1px 0px;
+  transform: rotate(45deg);
+  transition: border-width 150ms ease-in-out;
 }
 
 /* Projects */
@@ -211,11 +225,28 @@ img {
   text-decoration: none;
 }
 
-a:hover,
-i:hover {
-  color: #3686be;
-  text-decoration: none
+
+
+/* Turn on hover effects for mouse (and pointer devices) */
+
+@media not all and (pointer: coarse) {
+  .arrow:hover {
+    border-bottom-width: 4px;
+    border-right-width: 4px;
+  }
+
+  .welcome__txt:hover {
+    opacity: 1;
+    transition: .5s ease;
+  }
+
+  a:hover,
+  i:hover {
+    color: #3686be;
+    text-decoration: none
+  }
 }
+
 
 
 @media screen and (min-width: 48rem) { 
@@ -295,6 +326,10 @@ i:hover {
     <h1>Gergo Dudaszeg</h1>
     <p>Self-taught web developer</p>
   </div>
+  <div class="arrow-cont">
+  <a data-scroll href="#projects">
+    <div class="arrow"></div>
+  </a>
 </section>
 
 <section class="projects" id="projects"> <!-- ID required by test script -->
