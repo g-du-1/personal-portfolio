@@ -91,12 +91,27 @@ body {
 .welcome {
   background: #f5f5f5 url("bg970.jpg") center center no-repeat fixed; 
   background-size: cover; /* Shorthand didn't work with this. Need to look into it.*/
-  color: #fff;
   display: flex;
   flex-direction: column;
   height: 100vh;
   justify-content: center;
   text-align: center;
+}
+
+.welcome__txt {
+  background-color: #fff;
+  margin: auto;
+  opacity: 0.7;
+  padding: 1rem;
+}
+
+.welcome__txt:hover {
+  opacity: 1;
+  transition: .5s ease;
+}
+
+.welcome__txt h1 {
+  margin-top: 1rem;
 }
 
 /* Projects */
@@ -235,27 +250,27 @@ i:hover {
 /* Breakpoints for background image resolution */
 
 @media only screen and (max-width: 320px) {
-    /* Small screen, non-retina */
+    /* Small screen */
     .welcome { background-image: url("bg290.jpg"); }
 }
 
 @media only screen and (min-resolution: 2dppx) and (max-width: 320px) {
-    /* Small screen, retina */
+    /* Small screen, high res */
     .welcome { background-image: url("bg290@2x.jpg"); }
 }
 
 @media only screen and (min-width: 321px) and (max-width: 538px) {
-    /* Medium screen, non-retina */
+    /* Medium screen */
     .welcome { background-image: url("bg538.jpg"); }
 }
 
 @media only screen and (min-resolution: 2dppx) and (min-width: 321px) and (max-width: 538px) {
-    /* Medium screen, retina */
+    /* Medium screen, high res */
     .welcome { background-image: url("bg538@2x.jpg"); }
 }
 
 @media only screen and (min-resolution: 2dppx) and (min-width: 539px) {
-    /* Large screen, retina */
+    /* Large screen, high res */
     .welcome { background-image: url("bg970@2x.jpg"); }
 }
 
@@ -276,8 +291,10 @@ i:hover {
 </nav>
 
 <section class="welcome" id="welcome-section">
-  <h1>Gergo Dudaszeg</h1>
-  <p>Self-taught web developer</p>
+  <div class="welcome__txt">
+    <h1>Gergo Dudaszeg</h1>
+    <p>Self-taught web developer</p>
+  </div>
 </section>
 
 <section class="projects" id="projects"> <!-- ID required by test script -->
