@@ -80,6 +80,13 @@ body {
   text-decoration: none;
 }
 
+a.anchor {
+  display: block;
+  position: relative;
+  top: -2rem;
+  visibility: hidden;
+}
+
 .active {
   display: block;
 }
@@ -118,8 +125,8 @@ body {
 .arrow {
   box-sizing: border-box;
   box-shadow: 1px 1px 1px 0px #000000;
-  height: 2rem;
-  width: 2rem;
+  height: 1.7rem;
+  width: 1.7rem;
   border-style: solid;
   border-color: white;
   margin-bottom: 1rem;
@@ -137,7 +144,7 @@ body {
   grid-template-columns: auto;
   justify-content: center;
   overflow: auto;
-  padding: 1rem;
+  padding: 2rem 1rem;
   text-align: center;
 }
 
@@ -202,15 +209,10 @@ img {
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   text-align: center;
+  text-decoration: none;
 }
 
-.tile__img-cont:hover .tile__img {
-  opacity: 0.3;
-}
 
-.tile__img-cont:hover .tile__hvr-cont {
-  opacity: 1;
-}
 
 .tile__hvr-middle {
   background-color: #242424;
@@ -244,6 +246,14 @@ img {
   i:hover {
     color: #3686be;
     text-decoration: none
+  }
+
+  .tile__img-cont:hover .tile__img {
+    opacity: 0.3;
+}
+
+  .tile__img-cont:hover .tile__hvr-cont {
+    opacity: 1;
   }
 }
 
@@ -317,7 +327,7 @@ img {
   <ul class="nav__menu" id="js-menu">
     <li><a class="nav__link" href="#welcome-section">Home</a></li>
     <li><a class="nav__link" href="#projects">Projects</a></li>
-    <li><a class="nav__link" href="#links-section">Links</a></li>
+    <li><a class="nav__link" href="#links-anchor">Links</a></li>
   </ul>
 </nav>
 
@@ -377,6 +387,7 @@ img {
 </section>
 
 <section class="links" id="links-section">
+  <a class="anchor" id="links-anchor"></a> <!-- Padding method won't work because of background color -->
   <p class="links__txt">Contact:</p>
   <a id="profile-link" href="https://github.com/g-du-1" target="_blank">
     <i class="fab fa-github fa-3x" title="GitHub"></i></a>
