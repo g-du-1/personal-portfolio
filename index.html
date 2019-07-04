@@ -80,13 +80,6 @@ body {
   text-decoration: none;
 }
 
-a.anchor {
-  display: block;
-  position: relative;
-  top: -2rem;
-  visibility: hidden;
-}
-
 .active {
   display: block;
 }
@@ -148,24 +141,26 @@ a.anchor {
   text-align: center;
 }
 
-.links {
+.contact {
   align-items: center;
   background-color: #242424;
   display: grid;
-  grid-template-columns: repeat(3, minmax(75px, 7.5rem));
+  grid-template-columns: repeat(4, minmax(75px, 5rem));
   justify-content: center;
   padding-bottom: 1.25rem;
+  padding-top: 2rem;
+  grid-row-gap: 1rem;
   text-align: center;
 }
 
-.links__txt {
+.contact__txt {
   color: #fff;
-  font-size: 1.25rem;
-  grid-column: 1 / 4;
+  font-size: .8rem;
+  grid-column: 1 / 5;
   text-align: center;
 }
 
-.links a {
+.contact a {
   color: #fff;
   text-decoration: none;
 }
@@ -327,7 +322,7 @@ img {
   <ul class="nav__menu" id="js-menu">
     <li><a class="nav__link" href="#welcome-section">Home</a></li>
     <li><a class="nav__link" href="#projects">Projects</a></li>
-    <li><a class="nav__link" href="#links-anchor">Links</a></li>
+    <li><a class="nav__link" href="#contact-section">Contact</a></li>
   </ul>
 </nav>
 
@@ -386,15 +381,16 @@ img {
 
 </section>
 
-<section class="links" id="links-section">
-  <a class="anchor" id="links-anchor"></a> <!-- Padding method won't work because of background color -->
-  <p class="links__txt">Contact:</p>
+<section class="contact" id="contact-section">
   <a id="profile-link" href="https://github.com/g-du-1" target="_blank">
-    <i class="fab fa-github fa-3x" title="GitHub"></i></a>
-  <a href="https://www.freecodecamp.org/fcc31c65d3d-a148-477d-852d-3285bf29999e" target="_blank">
-    <i class="fab fa-free-code-camp fa-3x" title="freeCodeCamp"></i></a>
+    <i class="fab fa-github fa-2x" title="GitHub"></i></a>
   <a href="mailto:dudaszeg1@gmail.com" target="_blank">
-    <i class="fas fa-envelope fa-3x" title="Email"></i></a>
+    <i class="fas fa-envelope fa-2x" title="Email"></i></a>
+  <a href="https://www.freecodecamp.org/fcc31c65d3d-a148-477d-852d-3285bf29999e" target="_blank">
+    <i class="fab fa-free-code-camp fa-2x" title="freeCodeCamp"></i></a>
+  <a href="https://www.linkedin.com" target="_blank">
+    <i class="fab fa-linkedin fa-2x" title="LinkedIn"></i></a>
+  <p class="contact__txt">© 2019. Made by Gergo Dudaszeg</p>
 </section>
 
 <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
