@@ -15,8 +15,6 @@
 
 /*csslint box-sizing: false*/
 
-/* Mobile first*/
-
 html,
 body { 
   font-family: 'Roboto', sans-serif;
@@ -47,10 +45,10 @@ body {
   display: inline-block;
   font-size: 1.3rem;
   height: 1.7rem;
+  max-width: calc(100% - 3rem);
   overflow-x: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  max-width: calc(100% - 3rem);
 }
 
 .nav__toggle {
@@ -80,13 +78,6 @@ body {
   text-decoration: none;
 }
 
-.anchor {
-  display: block;
-  position: relative;
-  top: -2rem;
-  visibility: hidden;
-}
-
 .active {
   display: block;
 }
@@ -114,7 +105,7 @@ body {
   top: 2.2rem;
 }
 
-.welcome__txt h1 {
+.welcome__hdr {
   margin-top: 1rem;
 }
 
@@ -125,16 +116,16 @@ body {
 }
 
 .arrow {
-  box-sizing: border-box;
-  box-shadow: 1px 1px 1px 0px #000000;
-  height: 1.7rem;
-  width: 1.7rem;
-  border-style: solid;
   border-color: white;
+  border-style: solid;
+  border-width: 0 1px 1px 0;
+  box-shadow: 1px 1px 1px 0 #000000;
+  box-sizing: border-box;
+  height: 1.7rem;
   margin-bottom: 1rem;
-  border-width: 0px 1px 1px 0px;
   transform: rotate(45deg);
-  transition: border-width 150ms ease-in-out;
+  transition: opacity 0.5s;
+  width: 1.7rem;
 }
 
 /* Projects */
@@ -150,14 +141,66 @@ body {
   text-align: center;
 }
 
+img {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+
+.tile__img-cont {
+  position: relative;
+}
+
+.tile__img {
+  backface-visibility: hidden;
+  display: block;
+  height: auto;
+  opacity: 1;
+  transition: opacity 0.5s;
+  width: 100%;
+}
+
+.tile__hvr-cont {
+  height: 100%;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+}
+
+.tile__hvr-middle {
+  background-color: #242424;
+  color: white;
+  font-size: 16px;
+  padding: 16px 32px;
+}
+
+.tile__name {
+  color: #242424;
+  text-decoration: none;
+}
+
+/* Hidden anchor for contact section */
+
+.anchor {
+  display: block;
+  position: relative;
+  top: -2rem;
+  visibility: hidden;
+}
+
+/* Contact section */
+
 .contact {
   align-items: center;
   background-color: #242424;
   display: grid;
+  grid-row-gap: 1rem;
   grid-template-columns: repeat(4, minmax(75px, 5rem));
   justify-content: center;
   padding: 2rem;
-  grid-row-gap: 1rem;
   text-align: center;
 }
 
@@ -174,82 +217,28 @@ body {
   text-decoration: none;
 }
 
-img {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  display: block;
-  height: auto;
-  max-width: 100%;
-}
-
-
-
-
-
-
-
-
-
-
-
-.tile__img-cont {
-  position: relative;
-}
-
-.tile__img {
-  opacity: 1;
-  display: block;
-  width: 100%;
-  height: auto;
-  transition: .5s ease;
-  backface-visibility: hidden;
-}
-
-.tile__hvr-cont {
-  opacity: 0;
-  position: absolute;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  height: 100%;
-  width: 100%;
-}
-
-.tile__hvr-middle {
-  background-color: #242424;
-  color: white;
-  font-size: 16px;
-  padding: 16px 32px;
-}
-
-.tile__name {
-  color: #242424;
-  text-decoration: none;
-}
-
-
-
 /* Turn on hover effects for mouse (and pointer devices) */
 
 @media not all and (pointer: coarse) {
-  .arrow:hover {
-    border-bottom-width: 4px;
-    border-right-width: 4px;
-  }
-
-  .welcome__txt:hover {
-    opacity: 1;
-    transition: .5s ease;
-  }
-
   a:hover,
   i:hover {
     color: #3686be;
     text-decoration: none
   }
 
+  .welcome__txt:hover {
+    opacity: 1;
+    transition: opacity 0.5s;
+  }
+
+  .arrow:hover {
+    border-bottom-width: 4px;
+    border-right-width: 4px;
+  }
+
   .tile__img-cont:hover .tile__img {
     opacity: 0.3;
-}
+  }
 
   .tile__img-cont:hover .tile__hvr-cont {
     opacity: 1;
@@ -259,12 +248,12 @@ img {
     height: auto;
     text-align: center;
     text-decoration: none;
-    transition: .5s ease;
+    transition: opacity 0.5s;
     width: auto;
   }
 }
 
-
+/* On wide screens: hide navbar dropdown and title, make 2 project columns */
 
 @media screen and (min-width: 48rem) { 
   .nav__header {
@@ -340,13 +329,14 @@ img {
 
 <section class="welcome" id="welcome-section">
   <div class="welcome__txt">
-    <h1>Gergo Dudaszeg</h1>
+    <h1 class="welcome__hdr">Gergo Dudaszeg</h1>
     <p>Self-taught web developer</p>
   </div>
   <div class="arrow-cont">
-  <a data-scroll href="#projects">
-    <div class="arrow"></div>
-  </a>
+    <a data-scroll href="#projects">
+      <div class="arrow"></div>
+    </a>
+  </div>
 </section>
 
 <section class="projects" id="projects"> <!-- ID required by test script -->
