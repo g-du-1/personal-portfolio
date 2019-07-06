@@ -133,7 +133,7 @@ body {
 .projects {
   background-color: #f5f5f5;
   display: grid;
-  grid-gap: 2rem;
+  grid-gap: 1rem 3rem;
   grid-template-columns: auto;
   justify-content: center;
   overflow: auto;
@@ -155,10 +155,10 @@ img {
 .tile__img {
   backface-visibility: hidden;
   display: block;
-  height: 10.625rem;
+  height: auto;
   opacity: 1;
   transition: opacity 0.5s;
-  width: 18.75rem;
+  width: auto;
 }
 
 .tile__hvr-cont {
@@ -253,9 +253,12 @@ img {
   }
 }
 
-/* On wide screens: hide navbar dropdown and title, make 2 project columns */
+/* On wide screens*/
 
 @media screen and (min-width: 48rem) { 
+
+  /* Hide navbar dropdown and title*/
+
   .nav__header {
     display: none;
   }
@@ -279,8 +282,17 @@ img {
     top: 0;
   }
 
+  /* Make 2 project columns */
+
   .projects {
     grid-template-columns: auto auto;
+  }
+
+  /* Make tile scale with font size */
+
+  .tile__img {
+    height: 10.625rem;
+    width: 18.75rem;
   }
 }
 
