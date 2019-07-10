@@ -1,6 +1,13 @@
+/*csslint box-sizing: false*/
+
 @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 
-/*csslint box-sizing: false*/
+@font-face{
+  font-family:FontAwesome;
+  font-display: swap;
+  src:url(fa/webfonts/fa-solid-900.woff2);
+  src:url(fa/webfonts/fa-brands-400.woff2);
+}
 
 html,
 body { 
