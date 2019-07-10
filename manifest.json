@@ -3,7 +3,7 @@
   "short_name": "Portfolio",
   "theme_color": "#3686be",
   "background_color": "#3686be",
-  "display": "browser",
+  "display": "standalone",
   "Scope": "/",
   "start_url": "/",
   "icons": [
