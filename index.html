@@ -780,21 +780,25 @@ img {
 </section>
 </body>
 
-<!-- To Avoid render blocking 6 CRD vs 4 CRD
-<link inline href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
-<link inline href="fa/css/all.min.css" rel="stylesheet">
+<link rel="preload" href="fa/css/all.min.css" as="style" onload="this.rel='stylesheet'">
+<noscript>
+  <link rel="stylesheet" href="fa/css/all.min.css">
+</noscript>
+
+<link rel="preload" href="https://fonts.googleapis.com/css?family=Roboto&display=swap" as="style" onload="this.rel='stylesheet'">
+<noscript>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto&display=swap">
+</noscript>
+
 <script inline src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
--->
 
 <!--<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>-->
 
-
-
-<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="preload" as="font" media="none" onload="if(media!='all')media='all'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto&display=swap"></noscript>
+<!--
+<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet" media="none" onload="if(media!='all')media='all'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto&display=swap"></noscript>
 <link href="fa/css/all.min.css" rel="stylesheet" media="none" onload="if(media!='all')media='all'"><noscript><link rel="stylesheet" href="fa/css/all.min.css"></noscript> 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
-
+-->
 
 <script>
 
