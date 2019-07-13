@@ -11,6 +11,13 @@
 
 <style> 
 
+/* Hide FOUC */
+
+html {
+  opacity: 0;
+  visibility: hidden;
+}
+
 /*csslint box-sizing: false*/
 
 /************************ NORMALIZE.CSS STARTS ************************/
@@ -682,6 +689,11 @@ img {
 @media only screen and (min-resolution: 2dppx) and (min-width: 539px) {
     /* Large screen, retina */
     .welcome { background-image: url("bg970@2x.jpg"); }
+}
+
+html {
+  opacity: 1;
+  visibility: visible;
 }
 
 </style>
