@@ -623,7 +623,7 @@ img {
 
 /* On wide screens */
 
-@media screen and (min-width: 48rem) { 
+@media (min-width: 48rem), print { 
 
   /* Hide navbar dropdown and title*/
 
@@ -666,29 +666,38 @@ img {
 
 /* Breakpoints for background image resolution, might need one for 4k as well */
 
-@media only screen and (max-width: 320px) {
+@media (max-width: 320px) {
     /* Small screen */
     .welcome { background-image: url("bg290.jpg"); }
 }
 
-@media only screen and (min-resolution: 2dppx) and (max-width: 320px) {
+@media (min-resolution: 2dppx) and (max-width: 320px) {
     /* Small screen, retina */
     .welcome { background-image: url("bg290@2x.jpg"); }
 }
 
-@media only screen and (min-width: 321px) and (max-width: 538px) {
+@media (min-width: 321px) and (max-width: 538px) {
     /* Medium screen */
     .welcome { background-image: url("bg538.jpg"); }
 }
 
-@media only screen and (min-resolution: 2dppx) and (min-width: 321px) and (max-width: 538px) {
+@media (min-resolution: 2dppx) and (min-width: 321px) and (max-width: 538px) {
     /* Medium screen, retina */
     .welcome { background-image: url("bg538@2x.jpg"); }
 }
 
-@media only screen and (min-resolution: 2dppx) and (min-width: 539px) {
+@media (min-resolution: 2dppx) and (min-width: 539px) {
     /* Large screen, retina */
     .welcome { background-image: url("bg970@2x.jpg"); }
+}
+
+/* Fix background image print layout */
+
+@media print {
+  .welcome {
+    background: url("bg970@2x.jpg"); 
+    background-size: cover;
+  }
 }
 
 html {
