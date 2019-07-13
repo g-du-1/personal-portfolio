@@ -782,17 +782,11 @@ img {
 
 <!-- FA Modified to only include the icons used -->
 
-<link rel="preload" href="fa/css/all.min.css" as="style" onload="this.rel='stylesheet'">
-<noscript>
-  <link rel="stylesheet" href="fa/css/all.min.css">
-</noscript>
+<link href="fa/css/all.min.css" rel="stylesheet" type="text/css" media="none" onload="if(media!='all')media='all'"><noscript><link rel="stylesheet" href="fa/css/all.min.css"></noscript> 
 
 <!-- Font and JQuery should be cached for most users -->
 
-<link rel="preload" href="https://fonts.googleapis.com/css?family=Roboto&display=swap" as="style" onload="this.rel='stylesheet'">
-<noscript>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto&display=swap">
-</noscript>
+<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet" media="none" onload="if(media!='all')media='all'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto&display=swap"></noscript>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
