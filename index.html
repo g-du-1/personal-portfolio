@@ -387,7 +387,7 @@ html,
 body { 
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
-  overflow: auto;
+  overflow: hidden auto;
 }
 
 /* Nav menu */
@@ -491,7 +491,7 @@ body {
   backface-visibility: hidden;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .2), 0 6px 20px 0 rgba(0, 0, 0, .19);
   display: block;
-  max-width: 95vw;
+  max-width: 90vw;
   transition: opacity .5s;
   width: 18.75rem;
 }
@@ -632,15 +632,16 @@ body {
     .welcome { background-image: url("bg538@2x.jpg"); }
 }
 
-@media (min-resolution: 2dppx) and (min-width: 539px), print {
+@media (min-resolution: 2dppx) and (min-width: 539px) {
     /* Large screen, retina */
-    .welcome { background: url("bg970@2x.jpg"); }
+    .welcome { background-image: url("bg970@2x.jpg"); }
 }
 
 /* Fix print layout */
 
 @media print {
   .welcome {
+    background: url("bg970@2x.jpg");
     background-size: cover;
   }
 
