@@ -17,6 +17,7 @@
 /* Hide FOUC - hide page */
 
 html {
+  background-color: #f5f5f5;
   opacity: 0;
   visibility: hidden;
 }
@@ -477,8 +478,44 @@ body {
 
 /* Projects */
 
+.projects-header {
+  font-size: 1.5rem;
+  padding-top: 2rem;
+  text-align: center;
+}
+
+.main-project {
+  background-color: #fff;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .2), 0 6px 20px 0 rgba(0, 0, 0, .19);
+  margin: auto;
+  margin-top: 2rem;
+  max-width: 90vw;
+  padding: 0.5rem;
+  text-align: center;
+  width: 18.75rem;
+}
+
+.main-project__img {
+  max-width: 90vw;
+  width: 18.75rem;
+}
+
+.main-project__descr {
+  margin-bottom: 1.3861rem;
+}
+
+.main-project__btn {
+  background-color: #242424;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1rem;
+  margin: 0 0.25rem;
+  padding: 0.5rem;
+  width: 4rem;
+}
+
 .projects {
-  background-color: #f5f5f5;
   display: grid;
   grid-gap: 1rem 3rem;
   justify-content: center;
@@ -682,58 +719,65 @@ html {
 <section class="welcome" id="welcome-section">
   <div class="welcome__txt">
     <h1 class="welcome__hdr">Gergo Dudaszeg</h1>
-    <p>Self-taught web developer</p>
+    <p>Full Stack Developer</p>
   </div>
 </section>
 
-<section class="projects" id="projects"> <!-- ID required by test script -->
-  <div class="tile">
-    <div class="tile__img-cont project-tile"> <!-- project-tile class required by test script -->
-      <img class="tile__img" src="tribute.jpg" srcset="tribute.jpg 1x, tribute2x.jpg 2x, tribute3x.jpg 3x, tribute4x.jpg 4x" alt="Tribute Page">
-      <a class="tile__hvr-cont" href="https://g-du-1.github.io/tribute-page/" target="_blank" rel="noreferrer" title="Tribute Page">
-        <div class="tile__hvr-middle">Open</div>
-      </a>
-    </div>
-    <h5><a class="tile__name" href="https://g-du-1.github.io/tribute-page/" target="_blank" rel="noreferrer" title="Tribute Page">Tribute Page</a></h5>
+
+<section id="projects">
+  <div class="projects-header">Main Project</div>
+
+  <div class="main-project">
+    <img class="main-project__img" src="mockup.jpg" alt="TrackShows">
+    <h5><a class="tile__name" href="https://www.trackshows.com" target="_blank" rel="noreferrer" title="TrackShows">TrackShows</a></h5>
+    <div class="main-project__descr">MERN PWA for tracking TV Shows.</div>
+    <a href="https://github.com/g-du-1/TrackShows" target="_blank" rel="noreferrer"><button class="main-project__btn">Code</button></a>
+    <a href="https://www.trackshows.com" target="_blank" rel="noreferrer"><button class="main-project__btn">Live</button></a>
   </div>
 
-  <div class="tile">
-    <div class="tile__img-cont">
-      <img class="tile__img" src="survey.jpg" srcset="survey.jpg 1x, survey2x.jpg 2x, survey3x.jpg 3x, survey4x.jpg 4x" alt="Survey Form">
-      <a class="tile__hvr-cont" href="https://g-du-1.github.io/survey-form/" target="_blank" rel="noreferrer" title="Survey Form">
-        <div class="tile__hvr-middle">Open</div>
-      </a>
-    </div>
-    <h5><a class="tile__name" href="https://g-du-1.github.io/survey-form/" target="_blank" rel="noreferrer" title="Survey Form">Survey Form</a></h5>
-  </div>
+  <div class="projects-header">Static Pages</div>
 
-  <div class="tile">
-    <div class="tile__img-cont">
-      <img class="tile__img" src="productlanding.jpg" srcset="productlanding.jpg 1x, productlanding2x.jpg 2x, productlanding3x.jpg 3x, productlanding4x.jpg 4x" alt="Product Landing Page">
-      <a class="tile__hvr-cont" href="https://g-du-1.github.io/product-landing-page/" target="_blank" rel="noreferrer" title="Product Landing Page">
-        <div class="tile__hvr-middle">Open</div>
-      </a>
+  <div class="projects">
+    <div class="tile">
+      <div class="tile__img-cont project-tile"> <!-- project-tile class required by test script -->
+        <img class="tile__img" src="tribute.jpg" srcset="tribute.jpg 1x, tribute2x.jpg 2x, tribute3x.jpg 3x, tribute4x.jpg 4x" alt="Tribute Page">
+        <a class="tile__hvr-cont" href="https://g-du-1.github.io/tribute-page/" target="_blank" rel="noreferrer" title="Tribute Page">
+          <div class="tile__hvr-middle">Open</div>
+        </a>
+      </div>
+      <h5><a class="tile__name" href="https://g-du-1.github.io/tribute-page/" target="_blank" rel="noreferrer" title="Tribute Page">Tribute Page</a></h5>
     </div>
-    <h5><a class="tile__name" href="https://g-du-1.github.io/product-landing-page/" target="_blank" rel="noreferrer" title="Product Landing Page">Product Landing Page</a></h5>
-  </div>
 
-  <div class="tile">
-    <div class="tile__img-cont">
-      <img class="tile__img" src="techdoc.jpg" srcset="techdoc.jpg 1x, techdoc2x.jpg 2x, techdoc3x.jpg 3x, techdoc4x.jpg 4x" alt="Technical Documentation Page">
-      <a class="tile__hvr-cont" href="https://g-du-1.github.io/technical-documentation-page/" target="_blank" rel="noreferrer" title="Technical Documentation Page">
-        <div class="tile__hvr-middle">Open</div>
-      </a>
+    <div class="tile">
+      <div class="tile__img-cont">
+        <img class="tile__img" src="survey.jpg" srcset="survey.jpg 1x, survey2x.jpg 2x, survey3x.jpg 3x, survey4x.jpg 4x" alt="Survey Form">
+        <a class="tile__hvr-cont" href="https://g-du-1.github.io/survey-form/" target="_blank" rel="noreferrer" title="Survey Form">
+          <div class="tile__hvr-middle">Open</div>
+        </a>
+      </div>
+      <h5><a class="tile__name" href="https://g-du-1.github.io/survey-form/" target="_blank" rel="noreferrer" title="Survey Form">Survey Form</a></h5>
     </div>
-    <h5><a class="tile__name" href="https://g-du-1.github.io/technical-documentation-page/" target="_blank" rel="noreferrer" title="Technical Documentation Page">Technical Documentation</a></h5>
-  </div>
 
-  <div class="tile">
-    <div class="tile__img-cont">
-      <img class="tile__img" src="soon.PNG" alt="Coming soon">
-      <a class="tile__hvr-cont" title="Coming soon"></a>
+    <div class="tile">
+      <div class="tile__img-cont">
+        <img class="tile__img" src="productlanding.jpg" srcset="productlanding.jpg 1x, productlanding2x.jpg 2x, productlanding3x.jpg 3x, productlanding4x.jpg 4x" alt="Product Landing Page">
+        <a class="tile__hvr-cont" href="https://g-du-1.github.io/product-landing-page/" target="_blank" rel="noreferrer" title="Product Landing Page">
+          <div class="tile__hvr-middle">Open</div>
+        </a>
+      </div>
+      <h5><a class="tile__name" href="https://g-du-1.github.io/product-landing-page/" target="_blank" rel="noreferrer" title="Product Landing Page">Product Landing Page</a></h5>
     </div>
-    <h5><a class="tile__name" title="Coming soon">Coming soon</a></h5>
-  </div>  
+
+    <div class="tile">
+      <div class="tile__img-cont">
+        <img class="tile__img" src="techdoc.jpg" srcset="techdoc.jpg 1x, techdoc2x.jpg 2x, techdoc3x.jpg 3x, techdoc4x.jpg 4x" alt="Technical Documentation Page">
+        <a class="tile__hvr-cont" href="https://g-du-1.github.io/technical-documentation-page/" target="_blank" rel="noreferrer" title="Technical Documentation Page">
+          <div class="tile__hvr-middle">Open</div>
+        </a>
+      </div>
+      <h5><a class="tile__name" href="https://g-du-1.github.io/technical-documentation-page/" target="_blank" rel="noreferrer" title="Technical Documentation Page">Technical Documentation</a></h5>
+    </div>
+  </div>
 </section>
 
 <div class="anchor" id="contact-anchor"></div>
@@ -747,7 +791,7 @@ html {
     <i class="fab fa-free-code-camp fa-2x"></i></a>
   <a href="https://www.linkedin.com/in/gergo-dudaszeg" target="_blank" rel="noreferrer" title="LinkedIn">
     <i class="fab fa-linkedin fa-2x"></i></a>
-  <p class="contact__txt">© 2019. Made by Gergo Dudaszeg</p>
+  <p class="contact__txt">© 2020 Made by Gergo Dudaszeg</p>
 </section>
 
 </body>
